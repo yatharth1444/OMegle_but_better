@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Landing = () => {
     const [name, setName] = useState("")
@@ -7,10 +8,8 @@ const Landing = () => {
         <input type="text" onChange={(e)=>{
             setName(e.target.value)
         }} />
-     <h1>Landing ...</h1>
-     <button onClick={()=>{
-
-     }}>Join</button>
+      <h1>Landing ...</h1>
+      <Link to={`/room/?name=${name}`}>Join</Link>
     </div>
   )
 }
